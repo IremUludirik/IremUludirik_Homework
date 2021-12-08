@@ -1,0 +1,907 @@
+{
+	"info": {
+		"_postman_id": "3626806b-dea4-4ff5-83dc-2c4cfc7980c5",
+		"name": "twitchOrnegi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Missing password-Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"username\": \"{{username}}\", \"password\": \"\", \"client_id\": \"{{client_id}}\",\r\n\"undelete_user\": false}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://passport.twitch.tv/login",
+					"protocol": "https",
+					"host": [
+						"passport",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "img",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://static-cdn.jtvnw.net/ttv-boxart/27471_IGDB-285x380.jpg",
+					"protocol": "https",
+					"host": [
+						"static-cdn",
+						"jtvnw",
+						"net"
+					],
+					"path": [
+						"ttv-boxart",
+						"27471_IGDB-285x380.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/users?login=Userdeneme",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"users"
+					],
+					"query": [
+						{
+							"key": "login",
+							"value": "Userdeneme"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cheermotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/bits/cheermotes",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"bits",
+						"cheermotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel Information",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/channels?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"channels"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not Match-Commercial",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"broadcaster_id\": \"{{broadcaster_id}}\",\n  \"length\": 60\n}"
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/channels/commercial",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"channels",
+						"commercial"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel Emotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/chat/emotes?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"chat",
+						"emotes"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Global Emotes",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/chat/emotes/global",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"chat",
+						"emotes",
+						"global"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel Chat Badges",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/chat/badges?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"chat",
+						"badges"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Global Chat Badges",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/chat/badges/global",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"chat",
+						"badges",
+						"global"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chat Settings",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/chat/settings?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"chat",
+						"settings"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Clips",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer 3fcu7t33gwpu25nb0cosm4lopevc4y"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/clips?broadcaster_id=748331674&first=5",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"clips"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						},
+						{
+							"key": "first",
+							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing parameter-Set Extension Required Configuration",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer wg9j25taqli2zyuipdqa462lfmobyd"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "{\n  \"required_configuration\": \"RCS\",\n  \"extension_id\": \"uo6dggojyb8d6soh92zknwmi5ej1q2\",\n  \"extension_version\": \"0.0.1\"\n}",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/extensions/required_configuration?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"extensions",
+						"required_configuration"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create EventSub Subscription",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"type\":\"user.update\",\"version\":\"1\",\"condition\":{\"user_id\":\"{{user_id}}\"},\"transport\":{\"method\":\"webhook\",\"callback\":\"https://this-is-a-callback.com\",\"secret\":\"s3cre7s3cre7\"}}"
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/eventsub/subscriptions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"eventsub",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete EventSub Subscription",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/eventsub/subscriptions?id=de335f1b-4aa6-4380-b65f-8cd36dddf633",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"eventsub",
+						"subscriptions"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "de335f1b-4aa6-4380-b65f-8cd36dddf633"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EventSub Subscriptions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/eventsub/subscriptions",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"eventsub",
+						"subscriptions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Top Games",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/games/top",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"games",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Games",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/games?id=493057",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"games"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "493057"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forbidden-Check AutoMod Status",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer e4hgsmxkdaewv9kvqbdfl62uv395a5"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"data\": [\n    {\n      \"msg_id\": \"123\",\n      \"msg_text\": \"Hello World!\",\n      \"user_id\": \"23749\"\n    },\n    {\n      \"msg_id\": \"393\",\n      \"msg_text\": \"Boooooo!\",\n      \"user_id\": \"23422\"\n    }\n  ]\n}"
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/moderation/enforcements/status?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"moderation",
+						"enforcements",
+						"status"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Missing-Predictions",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer etzz4uab3qfgf5tcr9424g9p0y88lr"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"broadcaster_id\": \"{{broadcaster_id}}\",\n  \"title\": \"Any leeks in the stream?\",\n  \"outcomes\": [\n    {\n      \"title\": \"Yes, give it time.\"\n    },\n    {\n      \"title\": \"Definitely not.\"\n    }\n  ],\n  \"prediction_window\": \"120\"\n}"
+				},
+				"url": {
+					"raw": "https://api.twitch.tv/helix/predictions?broadcaster_id=748331674&title=Hello&outcomes=[1,2,3]&outcome.title=Bye&prediction_window=120",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"predictions"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						},
+						{
+							"key": "title",
+							"value": "Hello"
+						},
+						{
+							"key": "outcomes",
+							"value": "[1,2,3]"
+						},
+						{
+							"key": "outcome.title",
+							"value": "Bye"
+						},
+						{
+							"key": "prediction_window",
+							"value": "120"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Not found-Channel Stream Schedule",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer etzz4uab3qfgf5tcr9424g9p0y88lr"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/schedule?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"schedule"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Channel iCalendar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/schedule/icalendar?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"schedule",
+						"icalendar"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Search Categories",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer etzz4uab3qfgf5tcr9424g9p0y88lr"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/search/categories?query=fort",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"search",
+						"categories"
+					],
+					"query": [
+						{
+							"key": "query",
+							"value": "fort"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Stream Tags",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer etzz4uab3qfgf5tcr9424g9p0y88lr"
+					},
+					{
+						"key": "Client-Id",
+						"value": "znziwvbka4knhinp6sipombd3ebl4e"
+					}
+				],
+				"url": {
+					"raw": "https://api.twitch.tv/helix/streams/tags?broadcaster_id=748331674",
+					"protocol": "https",
+					"host": [
+						"api",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"helix",
+						"streams",
+						"tags"
+					],
+					"query": [
+						{
+							"key": "broadcaster_id",
+							"value": "748331674"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validating",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer etzz4uab3qfgf5tcr9424g9p0y88lr"
+					}
+				],
+				"url": {
+					"raw": "https://id.twitch.tv/oauth2/validate",
+					"protocol": "https",
+					"host": [
+						"id",
+						"twitch",
+						"tv"
+					],
+					"path": [
+						"oauth2",
+						"validate"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
