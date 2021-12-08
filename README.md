@@ -13,3 +13,8 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - Google Page Speed Hakkında (Medium)
   - 2. Homework
       - Postman API Collection
+
+[] 3. Hafta 🌻:
+  - 1. Homework
+      - RESTAssured Test
+  
