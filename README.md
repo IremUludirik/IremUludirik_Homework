@@ -14,7 +14,9 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
   - 2. Homework
       - Postman API Collection
 
-[] 3. Hafta 🌻:
+- [x] 3. Hafta :hibiscus::
   - 1. Homework
       - RESTAssured Test
+  - 2. Homework
+      - Cucumber.js BDD Test
   
