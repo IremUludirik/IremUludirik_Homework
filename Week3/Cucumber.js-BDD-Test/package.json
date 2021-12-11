@@ -1,0 +1,21 @@
+{
+  "name": "js-tests",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "C:/Users/irem6.DESKTOP-8MQ14NE/js-tests/node_modules/.bin/cucumber-js -f @cucumber/pretty-formatter features/test.feature"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^7.3.1",
+    "@cucumber/pretty-formatter": "^1.0.0-alpha.1",
+    "chai": "^4.3.4",
+    "chromedriver": "^96.0.0"
+  },
+  "dependencies": {
+    "selenium-webdriver": "^4.1.0"
+  }
+}
