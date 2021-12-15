@@ -63,7 +63,6 @@ https://medium.com/@iremuludirik/cucumber-js-ve-selenium-ile-bdd-yakla%C5%9F%C4%
 &nbsp;
 
 
-
 # :tada::tada: Başarı :clap::clap:
 <a href="https://resimlink.com/IQdTg" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/IQdTg.jpg" width="75%" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 </div>
