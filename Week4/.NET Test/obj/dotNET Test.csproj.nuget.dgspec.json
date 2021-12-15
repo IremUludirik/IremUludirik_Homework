@@ -1,0 +1,88 @@
+{
+  "format": 1,
+  "restore": {
+    "c:\\Users\\irem6.DESKTOP-8MQ14NE\\OneDrive\\Masaüstü\\dotNET Test\\dotNET Test.csproj": {}
+  },
+  "projects": {
+    "c:\\Users\\irem6.DESKTOP-8MQ14NE\\OneDrive\\Masaüstü\\dotNET Test\\dotNET Test.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "c:\\Users\\irem6.DESKTOP-8MQ14NE\\OneDrive\\Masaüstü\\dotNET Test\\dotNET Test.csproj",
+        "projectName": "dotNET Test",
+        "projectPath": "c:\\Users\\irem6.DESKTOP-8MQ14NE\\OneDrive\\Masaüstü\\dotNET Test\\dotNET Test.csproj",
+        "packagesPath": "C:\\Users\\irem6.DESKTOP-8MQ14NE\\.nuget\\packages\\",
+        "outputPath": "c:\\Users\\irem6.DESKTOP-8MQ14NE\\OneDrive\\Masaüstü\\dotNET Test\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\irem6.DESKTOP-8MQ14NE\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp3.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp3.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "dependencies": {
+            "DotNetSeleniumExtras.PageObjects.Core": {
+              "target": "Package",
+              "version": "[4.0.1, )"
+            },
+            "Microsoft.NET.Test.Sdk": {
+              "target": "Package",
+              "version": "[16.5.0, )"
+            },
+            "Microsoft.TestPlatform.TestHost": {
+              "target": "Package",
+              "version": "[17.0.1-release-20211109-01, )"
+            },
+            "NUnit": {
+              "target": "Package",
+              "version": "[3.12.0, )"
+            },
+            "NUnit3TestAdapter": {
+              "target": "Package",
+              "version": "[3.16.1, )"
+            },
+            "Selenium.WebDriver": {
+              "target": "Package",
+              "version": "[4.1.0, )"
+            },
+            "Selenium.WebDriver.ChromeDriver": {
+              "target": "Package",
+              "version": "[96.0.4664.4500, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.415\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
