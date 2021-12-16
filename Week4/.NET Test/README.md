@@ -32,19 +32,19 @@ TR
 - VSCode üzerinden C# .NetCore ile çalışmak için gerekli komutları, extensionları ve paketler tanımlandı ve yüklendi.
 - Page Object Model ile çalışıldı.
 
- Senaryo I:
-  - Sitenin ana sayfasına giriş yapılır.
-  - "Kampanyalar" kategorisine gidilir.
-  - "Harry Potter 2022 Ajandaları" seçilir.
-  - "Mabbels Harry Potter Slytherin Haftalık Ajanda" seçilir.
-  - Belirtilen süre kadar beklenerek, üzerinde yazan text onaylanır.
-  
-   Senaryo II:
-  - Sitenin ana sayfasına giriş yapılır.
-  - "Yeni Çıkanlar" kategorisine gidilir.
-  - "Edebiyat" kategorisi seçilir.
-  - "Dar Kapı" adlı kitap seçilir.
-  - Belirtilen süre kadar beklenerek, üzerinde yazan text onaylanır.
+   Senaryo I:
+    - Sitenin ana sayfasına giriş yapılır.
+    - "Kampanyalar" kategorisine gidilir.
+    - "Harry Potter 2022 Ajandaları" seçilir.
+    - "Mabbels Harry Potter Slytherin Haftalık Ajanda" seçilir.
+    - Belirtilen süre kadar beklenerek, üzerinde yazan text onaylanır.
+
+     Senaryo II:
+    - Sitenin ana sayfasına giriş yapılır.
+    - "Yeni Çıkanlar" kategorisine gidilir.
+    - "Edebiyat" kategorisi seçilir.
+    - "Dar Kapı" adlı kitap seçilir.
+    - Belirtilen süre kadar beklenerek, üzerinde yazan text onaylanır.
 
 
 <div align ="center">
