@@ -21,7 +21,7 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - Cucumber.js BDD Test
   
   
-- [ ] 4. Hafta :star::
+- [x] 4. Hafta :star::
   - 1. Homework
       - .NET Test
   - 2. Homework
