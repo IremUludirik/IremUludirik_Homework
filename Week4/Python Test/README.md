@@ -64,5 +64,22 @@ TR
     - Alışverişe devam edilir.
     &nbsp;
 
+<div align ="center">
+  
+ # :open_file_folder: Klasörleme :open_file_folder:
+  
+&nbsp;
+  <a href="https://resimlink.com/gAerZEfF" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/gAerZEfF.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+
+
+
+&nbsp;
+ 
+
+
+
+# :tada::tada: Başarı :clap::clap:
+<a href="https://resimlink.com/aSdB8gT2" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/aSdB8gT2.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+  &nbsp;
 
 
