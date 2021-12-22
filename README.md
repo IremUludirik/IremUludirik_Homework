@@ -28,7 +28,7 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - Python Test
   
   
-- [ ] 5. Hafta :space_invader:
+- [ ] 5. Hafta :space_invader::
   - 1. Homework
       - POM Android Tests
   - 2. Homework
