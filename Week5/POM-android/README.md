@@ -138,7 +138,7 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
 
 # :tada::tada: Başarı :clap::clap:
   &nbsp;
-  - Sin Up:
+  - Sing Up:
   &nbsp;
   
   <a href="https://resimlink.com/JjhD" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/JjhD.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
