@@ -1,6 +1,6 @@
 # Javada Page Object Model ile Android Test Otomasyonu
 :tada: Detaylar için Medium üzerinden yazdığım yazıya bakabilirsiniz:
-&nbsp;
+&nbsp; 
 
 https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otomasyonu-ad0fd13b2453
 
