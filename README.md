@@ -30,7 +30,7 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - .NET Test
   - 2. Homework
       - Python Test
-   &nbsp;
+   &nbsp; 
   
 - [x] 5. Hafta :space_invader::
   - 1. Homework
