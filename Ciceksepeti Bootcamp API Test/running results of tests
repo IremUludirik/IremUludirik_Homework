@@ -1,0 +1,598 @@
+{
+	"id": "9b1b6a36-3c38-4c3a-877b-bd8875b45583",
+	"name": "Ciceksepeti Bootcamp API Test",
+	"timestamp": "2021-12-28T18:35:00.825Z",
+	"collection_id": "18588639-c1164f5a-eb4f-4910-a632-85648f5c4eaf",
+	"folder_id": 0,
+	"environment_id": "a3eaa616-7651-45c1-911d-9137067d517c",
+	"totalPass": 79,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "f820e5b4-e694-48ab-b871-8d5575c6c0a8",
+			"name": "cityName_ankara",
+			"url": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io/?cityName=ankara",
+			"time": 440,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"cityName check for Json Data": true,
+				"length of the reviewDtos": true,
+				"type of reviewDtos ": true,
+				"element size of the reviewDtos's objects": true,
+				"cityName is only ANKARA": false,
+				"type of cityName": true,
+				"first letter of the cityName is upper case": true,
+				"total comment value equal to reviewDtos objects number": true,
+				"type of comment": true,
+				"first letter of the comment shoulde be an upper case": true,
+				"type of name": true,
+				"at least two words for name": true,
+				"name should not have special character": true,
+				"type of rating": true,
+				"rating value should be zero and bigger than zero": true,
+				"type of createOn": true,
+				"last digit of the createOn should be a letter": true,
+				"first digit of the createOn shoulde be a number": true,
+				"length od the createOn": true,
+				"type of the regionName": true,
+				"type of the objects ,for only ANKARA,": true,
+				"length of the objects ,for only ANKARA,": true,
+				"type of cityName ,for only ANKARA,": true,
+				"first letter of the cityName is upper case ,for only ANKARA,": true,
+				"total comment value equal to reviewDtos objects number ,for only ANKARA,": true,
+				"type of comment ,for only ANKARA, ": true,
+				"first letter of the comment shoulde be an upper case ,for only ANKARA,": true,
+				"type of name ,for only ANKARA,": true,
+				"at least two words for name ,for only ANKARA, ": true,
+				"name should not have special character ,for only ANKARA,": true,
+				"type of rating ,for only ANKARA,": true,
+				"rating value should be zero and bigger than zero ,for only ANKARA,": true,
+				"type of createOn ,for only ANKARA,": true,
+				"last digit of the createOn should be a letter ,for only ANKARA,": true,
+				"first digit of the createOn shoulde be a number ,for only ANKARA,": true,
+				"length od the createOn ,for only ANKARA": true,
+				"type of the regionName ,for only ANKARA": true,
+				"Status code is 200": true,
+				"Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"cityName check for Json Data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length of the reviewDtos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of reviewDtos ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"element size of the reviewDtos's objects": {
+					"pass": 1,
+					"fail": 0
+				},
+				"cityName is only ANKARA": {
+					"pass": 0,
+					"fail": 1
+				},
+				"type of cityName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of the cityName is upper case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"total comment value equal to reviewDtos objects number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of comment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of the comment shoulde be an upper case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"at least two words for name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"name should not have special character": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of rating": {
+					"pass": 1,
+					"fail": 0
+				},
+				"rating value should be zero and bigger than zero": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of createOn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"last digit of the createOn should be a letter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first digit of the createOn shoulde be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length od the createOn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of the regionName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of the objects ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length of the objects ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of cityName ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of the cityName is upper case ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"total comment value equal to reviewDtos objects number ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of comment ,for only ANKARA, ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of the comment shoulde be an upper case ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of name ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"at least two words for name ,for only ANKARA, ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"name should not have special character ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of rating ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"rating value should be zero and bigger than zero ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of createOn ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"last digit of the createOn should be a letter ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first digit of the createOn shoulde be a number ,for only ANKARA,": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length od the createOn ,for only ANKARA": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of the regionName ,for only ANKARA": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				440
+			],
+			"allTests": [
+				{
+					"cityName check for Json Data": true,
+					"length of the reviewDtos": true,
+					"type of reviewDtos ": true,
+					"element size of the reviewDtos's objects": true,
+					"cityName is only ANKARA": false,
+					"type of cityName": true,
+					"first letter of the cityName is upper case": true,
+					"total comment value equal to reviewDtos objects number": true,
+					"type of comment": true,
+					"first letter of the comment shoulde be an upper case": true,
+					"type of name": true,
+					"at least two words for name": true,
+					"name should not have special character": true,
+					"type of rating": true,
+					"rating value should be zero and bigger than zero": true,
+					"type of createOn": true,
+					"last digit of the createOn should be a letter": true,
+					"first digit of the createOn shoulde be a number": true,
+					"length od the createOn": true,
+					"type of the regionName": true,
+					"type of the objects ,for only ANKARA,": true,
+					"length of the objects ,for only ANKARA,": true,
+					"type of cityName ,for only ANKARA,": true,
+					"first letter of the cityName is upper case ,for only ANKARA,": true,
+					"total comment value equal to reviewDtos objects number ,for only ANKARA,": true,
+					"type of comment ,for only ANKARA, ": true,
+					"first letter of the comment shoulde be an upper case ,for only ANKARA,": true,
+					"type of name ,for only ANKARA,": true,
+					"at least two words for name ,for only ANKARA, ": true,
+					"name should not have special character ,for only ANKARA,": true,
+					"type of rating ,for only ANKARA,": true,
+					"rating value should be zero and bigger than zero ,for only ANKARA,": true,
+					"type of createOn ,for only ANKARA,": true,
+					"last digit of the createOn should be a letter ,for only ANKARA,": true,
+					"first digit of the createOn shoulde be a number ,for only ANKARA,": true,
+					"length od the createOn ,for only ANKARA": true,
+					"type of the regionName ,for only ANKARA": true,
+					"Status code is 200": true,
+					"Status code name has string": true
+				}
+			]
+		},
+		{
+			"id": "c92335f9-9db1-48eb-b525-335e56a1bd0d",
+			"name": "cityName_istanbul",
+			"url": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io/?cityName=istanbul",
+			"time": 573,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"cityName check for Json Data": true,
+				"length of reviewDtos": true,
+				"type of reviewDtos ": true,
+				"element size of the reviewDtos's objects": true,
+				"size of cityName": true,
+				"reviewDtos size equal to cityNameCheck size": true,
+				"type of cityName": true,
+				"first letter of the cityName is upper case": true,
+				"comment size equal to reviewDtos size": true,
+				"type of comment": true,
+				"first letter shoulde be upper case": true,
+				"type of name": true,
+				"at least two words for name": true,
+				"name should not have special character": true,
+				"type of rating": true,
+				"rating value": true,
+				"type of createOn": true,
+				"last digit of the createOn should be a letter": true,
+				"first digit of the createOn shoulde be a number": true,
+				"length od the createOn": true,
+				"type of regionName": true,
+				"Status code is 200": true,
+				"Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"cityName check for Json Data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length of reviewDtos": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of reviewDtos ": {
+					"pass": 1,
+					"fail": 0
+				},
+				"element size of the reviewDtos's objects": {
+					"pass": 1,
+					"fail": 0
+				},
+				"size of cityName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"reviewDtos size equal to cityNameCheck size": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of cityName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of the cityName is upper case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"comment size equal to reviewDtos size": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of comment": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter shoulde be upper case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"at least two words for name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"name should not have special character": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of rating": {
+					"pass": 1,
+					"fail": 0
+				},
+				"rating value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of createOn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"last digit of the createOn should be a letter": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first digit of the createOn shoulde be a number": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length od the createOn": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of regionName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				573
+			],
+			"allTests": [
+				{
+					"cityName check for Json Data": true,
+					"length of reviewDtos": true,
+					"type of reviewDtos ": true,
+					"element size of the reviewDtos's objects": true,
+					"size of cityName": true,
+					"reviewDtos size equal to cityNameCheck size": true,
+					"type of cityName": true,
+					"first letter of the cityName is upper case": true,
+					"comment size equal to reviewDtos size": true,
+					"type of comment": true,
+					"first letter shoulde be upper case": true,
+					"type of name": true,
+					"at least two words for name": true,
+					"name should not have special character": true,
+					"type of rating": true,
+					"rating value": true,
+					"type of createOn": true,
+					"last digit of the createOn should be a letter": true,
+					"first digit of the createOn shoulde be a number": true,
+					"length od the createOn": true,
+					"type of regionName": true,
+					"Status code is 200": true,
+					"Status code name has string": true
+				}
+			]
+		},
+		{
+			"id": "8d3a5b65-ecac-4d0a-b445-85f85e7a0e9a",
+			"name": "cityName_van",
+			"url": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io/?cityName=van",
+			"time": 1149,
+			"responseCode": {
+				"code": 404,
+				"name": "Not Found"
+			},
+			"tests": {
+				"cityName check for Json Data": true,
+				"length of body": true,
+				"type of message": true,
+				"syllable of message": true,
+				"digit of message": true,
+				"first letter of message is upper case": true,
+				"message should not have specialChar": true,
+				"Status code is 404": true,
+				"message": true,
+				"Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"cityName check for Json Data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length of body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"syllable of message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"digit of message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"first letter of message is upper case": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message should not have specialChar": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 404": {
+					"pass": 1,
+					"fail": 0
+				},
+				"message": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1149
+			],
+			"allTests": [
+				{
+					"cityName check for Json Data": true,
+					"length of body": true,
+					"type of message": true,
+					"syllable of message": true,
+					"digit of message": true,
+					"first letter of message is upper case": true,
+					"message should not have specialChar": true,
+					"Status code is 404": true,
+					"message": true,
+					"Status code name has string": true
+				}
+			]
+		},
+		{
+			"id": "aac723ce-a47e-446d-a76e-9d760f4b8ba4",
+			"name": "cityName is null",
+			"url": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io/?cityName",
+			"time": 510,
+			"responseCode": {
+				"code": 400,
+				"name": "Bad Request"
+			},
+			"tests": {
+				"cityName check for Json Data": true,
+				"type of body": true,
+				"type of cityName": true,
+				"length of body": true,
+				"cityName should not have specialChar": true,
+				"Status code is 400": true,
+				"cityName value": true,
+				"Status code name has string": true
+			},
+			"testPassFailCounts": {
+				"cityName check for Json Data": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"type of cityName": {
+					"pass": 1,
+					"fail": 0
+				},
+				"length of body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"cityName should not have specialChar": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code is 400": {
+					"pass": 1,
+					"fail": 0
+				},
+				"cityName value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Status code name has string": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				510
+			],
+			"allTests": [
+				{
+					"cityName check for Json Data": true,
+					"type of body": true,
+					"type of cityName": true,
+					"length of body": true,
+					"cityName should not have specialChar": true,
+					"Status code is 400": true,
+					"cityName value": true,
+					"Status code name has string": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 2672,
+	"collection": {
+		"requests": [
+			{
+				"id": "f820e5b4-e694-48ab-b871-8d5575c6c0a8",
+				"method": "GET"
+			},
+			{
+				"id": "c92335f9-9db1-48eb-b525-335e56a1bd0d",
+				"method": "GET"
+			},
+			{
+				"id": "8d3a5b65-ecac-4d0a-b445-85f85e7a0e9a",
+				"method": "GET"
+			},
+			{
+				"id": "aac723ce-a47e-446d-a76e-9d760f4b8ba4",
+				"method": "GET"
+			}
+		]
+	}
+}

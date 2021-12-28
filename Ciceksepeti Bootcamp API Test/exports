@@ -1,0 +1,622 @@
+{
+	"info": {
+		"_postman_id": "c1164f5a-eb4f-4910-a632-85648f5c4eaf",
+		"name": "Ciceksepeti Bootcamp API Test",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "cityName_ankara",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//List of comments made for the province of Ankara\r",
+							"\r",
+							"     let upperLetter = [\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\",\"Z\"]\r",
+							"     let numbers=[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"]\r",
+							"     let upperFirst = upperLetter.concat(numbers) //this array using for first upper case\r",
+							"     let specialChar = [\"!\",\"^\",\"+\",\"%\",\"&\",\"/\",\"(\",\")\",\"=\",\"?\",\"_\",\">\",\"£\",\"#\",\"$\",\"½\",\"{\",\"[\",\"]\",\"}\"];\r",
+							"\r",
+							"pm.test(\"cityName check for Json Data\", function () {\r",
+							"     pm.expect((pm.request.toJSON().url.query[0]).value == (\"ankara\")).to.be.true //cityName check for Json should be ankara \r",
+							"})\r",
+							"\r",
+							"     let responseData = pm.response.json()[\"reviewDtos\"]; //reviewDtos which is in the body. 4 objects in the reviewDtos\r",
+							"\r",
+							"pm.test(\"length of the reviewDtos\", function(){\r",
+							"     pm.expect(responseData.length).to.equal(4); //reviewDtoss size check should be 4 object\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of reviewDtos \", function () {\r",
+							"     pm.expect(typeof responseData == \"object\").to.be.true\r",
+							"})\r",
+							"\r",
+							"pm.test(\"element size of the reviewDtos's objects\", function () {\r",
+							"     pm.expect((responseData.map(element => Object.keys(element).length)).every(result => result==6)).to.be.true\r",
+							"})\r",
+							"\r",
+							"     //key:cityName\r",
+							"pm.test(\"cityName is only ANKARA\", function () {\r",
+							"     pm.expect.fail(((responseData.filter(element => element.cityName == \"ANKARA\"))),\"All of cityNames should be ANKARA\",\"cityName result is FAIL because last one's cityName is HATAY\")\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of cityName\", function () {\r",
+							"     responseData.every(element => pm.expect(typeof element.cityName == \"string\").to.be.true); //cityName is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first letter of the cityName is upper case\", function () {\r",
+							"     responseData.every(element => pm.expect(upperLetter.includes(element.cityName[0])).to.be.true); //First letter of the cityName is upper case\r",
+							"})\r",
+							"\r",
+							"     //key:comment\r",
+							"     let allComment = responseData.map(element => element.comment) //[\"10 luk hizmet \", \"Kaliteli Kargo\", \"Hızlı kargo ve sürpriz için teşekkürler\", \"Eşime aldım, gönderilmedi\"]\r",
+							"\r",
+							"pm.test(\"total comment value equal to reviewDtos objects number\", function () {\r",
+							"     pm.expect(allComment.length).to.equal(responseData.length) //4==4\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of comment\", function () {\r",
+							"     allComment.every(element => pm.expect(typeof element == \"string\").to.be.true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first letter of the comment shoulde be an upper case\", function () {\r",
+							"     allComment.every(element => pm.expect(upperFirst.includes(element[0])).to.be.true); //first letter shoulde be upper case check. 1,K,H,E\r",
+							"})\r",
+							"\r",
+							"     //key:name\r",
+							"pm.test(\"type of name\", function () {\r",
+							"     responseData.every(element => pm.expect(typeof element.name == \"string\").to.be.true); //name is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"at least two words for name\", function () {\r",
+							"     let least2words=responseData.map(element => (element.name.split(\" \")).length >= 2);//Must contain at least two words consisting of first and last name\r",
+							"     pm.expect(least2words.every(result => result == true)).to.be.true; //checking for name length\r",
+							"})\r",
+							"\r",
+							"pm.test(\"name should not have special character\", function () {\r",
+							"     responseData.every(element => pm.expect(element.name.includes(specialChar)).to.be.false); //name should not have specialChar\r",
+							"})\r",
+							"\r",
+							"     //key:rating\r",
+							"pm.test(\"type of rating\", function () {\r",
+							"     responseData.every(element => pm.expect(typeof element.rating == \"number\").to.be.true); //rating is number\r",
+							"})\r",
+							"\r",
+							"pm.test(\"rating value should be zero and bigger than zero\", function () {\r",
+							"     responseData.every(element => pm.expect(element.rating >= 0).to.be.true); //rating value should be zero and bigger than zero\r",
+							"})\r",
+							"\r",
+							"     //key:createOn\r",
+							"pm.test(\"type of createOn\", function () {\r",
+							"     responseData.every(element => pm.expect(typeof element.createOn == \"string\").to.be.true); //createOn is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"last digit of the createOn should be a letter\", function () {\r",
+							"     responseData.every(element => pm.expect(upperLetter.includes(element.createOn[element.createOn.length-1])).to.be.true); //last digit should be a letter\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first digit of the createOn shoulde be a number\", function () {\r",
+							"     responseData.every(element => pm.expect(numbers.includes(element.createOn[0])).to.be.true); //first digit shoulde be a number\r",
+							"})\r",
+							"\r",
+							"pm.test(\"length od the createOn\", function () {\r",
+							"     responseData.every(element => pm.expect(element.createOn.length <= 24).to.be.true); //createOn lenght should be equal 24 or less than 24\r",
+							"})\r",
+							"\r",
+							"     //key:regionName\r",
+							"pm.test(\"type of the regionName\", function () {\r",
+							"     responseData.every(element => pm.expect(typeof element.regionName == \"string\").to.be.true); //regionName is string   \r",
+							"})\r",
+							"\r",
+							"\r",
+							"     //cityName check that should be ANKARA\r",
+							"     let cityNameCheck = responseData.filter(element => element.cityName ==\"ANKARA\") //3 objects with ANKARA\r",
+							"\r",
+							"pm.test(\"type of the objects ,for only ANKARA,\", function () {\r",
+							"     pm.expect(typeof cityNameCheck == \"object\").to.be.true\r",
+							"})\r",
+							"\r",
+							"pm.test(\"length of the objects ,for only ANKARA,\", function () {\r",
+							"     pm.expect(cityNameCheck.length).to.equal(3); //size of the only ANKARA cityName is 3\r",
+							"})\r",
+							"\r",
+							"     //key:cityName\r",
+							"pm.test(\"type of cityName ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(typeof element.cityName == \"string\").to.be.true); //cityName is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first letter of the cityName is upper case ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(upperLetter.includes(element.cityName[0])).to.be.true); //First letter of the cityName is upper case\r",
+							"})\r",
+							"\r",
+							"     //key:comment\r",
+							"     //only comments made in ANKARA\r",
+							"     let commentCheck = cityNameCheck.map(element => element.comment) //[\"10 luk hizmet \", \"Kaliteli Kargo\", \"Hızlı kargo ve sürpriz için teşekkürler\"]\r",
+							"\r",
+							"pm.test(\"total comment value equal to reviewDtos objects number ,for only ANKARA,\", function () {\r",
+							"     pm.expect(commentCheck.length).to.equal(cityNameCheck.length) //3==3\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of comment ,for only ANKARA, \", function () {\r",
+							"     commentCheck.every(element => pm.expect(typeof element == \"string\").to.be.true);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first letter of the comment shoulde be an upper case ,for only ANKARA,\", function () {\r",
+							"     commentCheck.every(element => pm.expect(upperFirst.includes(element[0])).to.be.true); //first letter shoulde be upper case check. 1,K,H \r",
+							"})\r",
+							"\r",
+							"     //key:name\r",
+							"pm.test(\"type of name ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(typeof element.name == \"string\").to.be.true); //name is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"at least two words for name ,for only ANKARA, \", function () {\r",
+							"     let least2words=cityNameCheck.map(element => (element.name.split(\" \")).length >= 2);//Must contain at least two words consisting of first and last name\r",
+							"     pm.expect(least2words.every(result => result == true)).to.be.true; //checking for name length\r",
+							"})\r",
+							"\r",
+							"pm.test(\"name should not have special character ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(element.name.includes(specialChar)).to.be.false); //name should not have specialChar\r",
+							"})\r",
+							"\r",
+							"     //key:rating\r",
+							"pm.test(\"type of rating ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(typeof element.rating == \"number\").to.be.true); //rating is number\r",
+							"})\r",
+							"\r",
+							"pm.test(\"rating value should be zero and bigger than zero ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(element.rating >= 0).to.be.true); //rating value should be zero and bigger than zero\r",
+							"})\r",
+							"\r",
+							"     //key:createOn\r",
+							"pm.test(\"type of createOn ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(typeof element.createOn == \"string\").to.be.true); //createOn is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"last digit of the createOn should be a letter ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(upperLetter.includes(element.createOn[element.createOn.length-1])).to.be.true); //last digit should be a letter\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first digit of the createOn shoulde be a number ,for only ANKARA,\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(numbers.includes(element.createOn[0])).to.be.true); //first digit shoulde be a number\r",
+							"})\r",
+							"\r",
+							"pm.test(\"length od the createOn ,for only ANKARA\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(element.createOn.length == 24).to.be.true); //createOn lenght should be 24\r",
+							"})\r",
+							"\r",
+							"     //key:regionName\r",
+							"pm.test(\"type of the regionName ,for only ANKARA\", function () {\r",
+							"     cityNameCheck.every(element => pm.expect(typeof element.regionName == \"string\").to.be.true); //regionName is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"   \r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}cityName=ankara",
+					"host": [
+						"{{baseURL}}cityName=ankara"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cityName_ankara",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io?cityName=ankara",
+							"protocol": "https",
+							"host": [
+								"a7186cd5-de01-4d09-adc9-9cddfb83e72e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"query": [
+								{
+									"key": "cityName",
+									"value": "ankara"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n  \"paginationResponse\": {\n    \"pageItemsCount\": 20,\n    \"totalItemsCount\": 25005,\n    \"totalPageCount\": 1251\n  },\n  \"totalCount\": 25005,\n  \"starDtos\": [\n    {\n      \"point\": 1,\n      \"percent\": 5,\n      \"count\": 1228\n    },\n    {\n      \"point\": 2,\n      \"percent\": 1,\n      \"count\": 362\n    },\n    {\n      \"point\": 3,\n      \"percent\": 2,\n      \"count\": 606\n    },\n    {\n      \"point\": 4,\n      \"percent\": 9,\n      \"count\": 2247\n    },\n    {\n      \"point\": 5,\n      \"percent\": 82,\n      \"count\": 20562\n    }\n  ],\n  \"averageRate\": 4.5,\n  \"averageAllReviewsRate\": 4.5,\n  \"reviewDtos\": [\n    {\n      \"name\": \"Name Surname\",\n      \"comment\": \"10 luk hizmet \",\n      \"rating\": 10,\n      \"createOn\": \"2021-12-16T08:36:02.101Z\",\n      \"regionName\": \"\",\n      \"cityName\": \"ANKARA\"\n    },\n    {\n      \"name\": \"Name Surname 2\",\n      \"comment\": \"Kaliteli Kargo\",\n      \"rating\": 10,\n      \"createOn\": \"2021-12-16T08:31:53.078Z\",\n      \"regionName\": \"\",\n      \"cityName\": \"ANKARA\"\n    },\n    {\n      \"name\": \"Name Surname 3\",\n      \"comment\": \"Hızlı kargo ve sürpriz için teşekkürler\",\n      \"rating\": 10,\n      \"createOn\": \"2021-12-16T07:49:34.927Z\",\n      \"regionName\": \"\",\n      \"cityName\": \"ANKARA\"\n    },\n    {\n      \"name\": \"Name Surname 4\",\n      \"comment\": \"Eşime aldım, gönderilmedi\",\n      \"rating\": 0,\n      \"createOn\": \"2021-12-16T07:08:19.8Z\",\n      \"regionName\": \"\",\n      \"cityName\": \"HATAY\"\n    }\n  ]\n}"
+				}
+			]
+		},
+		{
+			"name": "cityName_istanbul",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//List of comments made for the province of İstanbul\r",
+							"\r",
+							"pm.test(\"cityName check for Json Data\", function () {\r",
+							"     pm.expect((pm.request.toJSON().url.query[0]).value == (\"istanbul\")).to.be.true //cityName check for Json should be istanbul \r",
+							"})\r",
+							"\r",
+							"     let reviewDtos = pm.response.json()[\"reviewDtos\"]; //reviewDtos which is in the body. 4 objects in the reviewDtos\r",
+							"\r",
+							"pm.test(\"length of reviewDtos\", function(){\r",
+							"     pm.expect(reviewDtos.length).to.equal(4); //reviewDtoss size check should be 4\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of reviewDtos \", function () {\r",
+							"     pm.expect(typeof reviewDtos == \"object\").to.be.true\r",
+							"})\r",
+							"\r",
+							"pm.test(\"element size of the reviewDtos's objects\", function () {\r",
+							"     pm.expect((reviewDtos.map(element => Object.keys(element).length)).every(result => result==6)).to.be.true\r",
+							"})\r",
+							"\r",
+							"     //key:cityName\r",
+							"     //cityName check that should be ISTANBUL\r",
+							"     let cityNameCheck = reviewDtos.filter(element => element.cityName ==\"ISTANBUL\") //4 objects with ISTANBUL\r",
+							"\r",
+							"pm.test(\"size of cityName\", function(){\r",
+							"     pm.expect(cityNameCheck.length).to.equal(4); //size of the only ISTANBUL cityName is 4, thus all of them\r",
+							"})\r",
+							"\r",
+							"pm.test(\"reviewDtos size equal to cityNameCheck size\", function(){\r",
+							"     pm.expect(reviewDtos.length ==cityNameCheck.length).to.be.true //reviewDtos size 4 == cityNameCheck size 4 check\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of cityName\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(typeof element.cityName == \"string\").to.be.true); //cityName is string\r",
+							"})\r",
+							"\r",
+							"     let upperLetter = [\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\",\"Z\"]\r",
+							"\r",
+							"pm.test(\"first letter of the cityName is upper case\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(upperLetter.includes(element.cityName[0])).to.be.true); //First letter of the cityName is upper case\r",
+							"})\r",
+							"\r",
+							"     //key:comment\r",
+							"     let commentCheck = reviewDtos.map(element => element.comment) //[\"10 luk hizmet \", \"Kaliteli Kargo\", \"Hızlı kargo ve sürpriz için teşekkürler\", \"Eşime aldım, gönderilmedi\"]\r",
+							"\r",
+							"pm.test(\"comment size equal to reviewDtos size\", function(){\r",
+							"     pm.expect(commentCheck.length).to.equal(reviewDtos.length) //4==4\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of comment\", function(){\r",
+							"     commentCheck.every(element => pm.expect(typeof element == \"string\").to.be.true);\r",
+							"})\r",
+							"\r",
+							"     let numbers=[\"0\",\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"]\r",
+							"     let upperFirst = upperLetter.concat(numbers)\r",
+							"\r",
+							"pm.test(\"first letter shoulde be upper case\", function(){\r",
+							"     commentCheck.every(element => pm.expect(upperFirst.includes(element[0])).to.be.true); //first letter shoulde be upper case check. 1,K,H,E\r",
+							"  })   \r",
+							"\r",
+							"     //key:name\r",
+							"pm.test(\"type of name\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(typeof element.name == \"string\").to.be.true); //name is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"at least two words for name\", function(){\r",
+							"     let least2words=reviewDtos.map(element => (element.name.split(\" \")).length >= 2);//Must contain at least two words consisting of first and last name\r",
+							"     pm.expect(least2words.every(result => result == true)).to.be.true; //checking for name length\r",
+							"})\r",
+							"\r",
+							"     let specialChar = [\"!\",\"^\",\"+\",\"%\",\"&\",\"/\",\"(\",\")\",\"=\",\"?\",\"_\",\">\",\"£\",\"#\",\"$\",\"½\",\"{\",\"[\",\"]\",\"}\"];\r",
+							"\r",
+							"pm.test(\"name should not have special character\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(element.name.includes(specialChar)).to.be.false); //name should not have specialChar\r",
+							"  })\r",
+							"\r",
+							"     //key:rating\r",
+							"pm.test(\"type of rating\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(typeof element.rating == \"number\").to.be.true); //rating is number\r",
+							"})\r",
+							"\r",
+							"pm.test(\"rating value\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(element.rating >= 0).to.be.true); //rating value should be zero and bigger than zero\r",
+							"})\r",
+							"\r",
+							"     //key:createOn\r",
+							"pm.test(\"type of createOn\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(typeof element.createOn == \"string\").to.be.true); //createOn is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"last digit of the createOn should be a letter\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(upperLetter.includes(element.createOn[element.createOn.length-1])).to.be.true); //last digit should be a letter\r",
+							"})\r",
+							"\r",
+							"pm.test(\"first digit of the createOn shoulde be a number\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(numbers.includes(element.createOn[0])).to.be.true); //first digit shoulde be a number\r",
+							"})\r",
+							"\r",
+							"     let createOn=reviewDtos.map(element =>element.createOn); //[\"2021-12-16T08:36:02.101Z\", \"2021-12-16T08:31:53.078Z\", \"2021-12-16T07:49:34.927Z\", \"2021-12-16T07:08:19.8Z\"]\r",
+							"     \r",
+							"pm.test(\"length od the createOn\", function(){\r",
+							"     createOn.every(element => pm.expect(element.length <= 24).to.be.true); //createOn lenght should be equal 24 or less than 24\r",
+							"})\r",
+							"\r",
+							"     //key:regionName\r",
+							"pm.test(\"type of regionName\", function(){\r",
+							"     reviewDtos.every(element => pm.expect(typeof element.regionName == \"string\").to.be.true); //regionName is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"OK\");\r",
+							"});\r",
+							"\r",
+							"\r",
+							"   \r",
+							"\r",
+							" "
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}cityName=istanbul",
+					"host": [
+						"{{baseURL}}cityName=istanbul"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cityName_istanbul",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io?cityName=istanbul",
+							"protocol": "https",
+							"host": [
+								"a7186cd5-de01-4d09-adc9-9cddfb83e72e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"query": [
+								{
+									"key": "cityName",
+									"value": "istanbul"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"paginationResponse\": {\n        \"pageItemsCount\": 20,\n        \"totalItemsCount\": 25005,\n        \"totalPageCount\": 1251\n    },\n    \"totalCount\": 25005,\n    \"starDtos\": [\n        {\n            \"point\": 1,\n            \"percent\": 5,\n            \"count\": 1228\n        },\n        {\n            \"point\": 2,\n            \"percent\": 1,\n            \"count\": 362\n        },\n        {\n            \"point\": 3,\n            \"percent\": 2,\n            \"count\": 606\n        },\n        {\n            \"point\": 4,\n            \"percent\": 9,\n            \"count\": 2247\n        },\n        {\n            \"point\": 5,\n            \"percent\": 82,\n            \"count\": 20562\n        }\n    ],\n    \"averageRate\": 4.5,\n    \"averageAllReviewsRate\": 4.5,\n    \"reviewDtos\": [\n        {\n            \"name\": \"Name Surname\",\n            \"comment\": \"10 luk hizmet \",\n            \"rating\": 10,\n            \"createOn\": \"2021-12-16T08:36:02.101Z\",\n            \"regionName\": \"\",\n            \"cityName\": \"ISTANBUL\"\n        },\n        {\n            \"name\": \"Name Surname 2\",\n            \"comment\": \"Kaliteli Kargo\",\n            \"rating\": 10,\n            \"createOn\": \"2021-12-16T08:31:53.078Z\",\n            \"regionName\": \"\",\n            \"cityName\": \"ISTANBUL\"\n        },\n        {\n            \"name\": \"Name Surname 3\",\n            \"comment\": \"Hızlı kargo ve sürpriz için teşekkürler\",\n            \"rating\": 10,\n            \"createOn\": \"2021-12-16T07:49:34.927Z\",\n            \"regionName\": \"\",\n            \"cityName\": \"ISTANBUL\"\n        },\n        {\n            \"name\": \"Name Surname 4\",\n            \"comment\": \"Eşime aldım, gönderilmedi\",\n            \"rating\": 0,\n            \"createOn\": \"2021-12-16T07:08:19.8Z\",\n            \"regionName\": \"\",\n            \"cityName\": \"ISTANBUL\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "cityName_van",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//List of comments made for the province of Van\r",
+							"\r",
+							"pm.test(\"cityName check for Json Data\", function () {\r",
+							"     pm.expect((pm.request.toJSON().url.query[0]).value == (\"van\")).to.be.true //cityName check for Json should be van \r",
+							"})\r",
+							"\r",
+							"    let body = pm.response.json(); //\"message\": \"Not Found\"\r",
+							"\r",
+							"pm.test(\"length of body\", function(){\r",
+							"     pm.expect(Object.keys(body).length).to.equal(1) //only one element\r",
+							"})\r",
+							"\r",
+							"pm.test(\"type of message\", function(){\r",
+							"     pm.expect(typeof body.message == \"string\").to.be.true//message value is string\r",
+							"})\r",
+							"\r",
+							"pm.test(\"syllable of message\", function(){\r",
+							"     pm.expect((body.message.split(\" \").length)).to.equal(2) //1:Not,2:Found\r",
+							"})\r",
+							"\r",
+							"pm.test(\"digit of message\", function(){\r",
+							"     pm.expect(body.message.length == 9).to.be.true//sum of all letters and space\r",
+							"})\r",
+							"\r",
+							"     let upperLetter = [\"A\",\"B\",\"C\",\"D\",\"E\",\"F\",\"G\",\"H\",\"I\",\"J\",\"K\",\"L\",\"M\",\"N\",\"O\",\"P\",\"Q\",\"R\",\"S\",\"T\",\"U\",\"V\",\"W\",\"X\",\"Y\",\"Z\"]\r",
+							"\r",
+							"pm.test(\"first letter of message is upper case\", function(){\r",
+							"     pm.expect(upperLetter.includes(body.message[0])).to.be.true; //First letter of the message is upper case\r",
+							"})\r",
+							"\r",
+							"     let specialChar = [\"!\",\"^\",\"+\",\"%\",\"&\",\"/\",\"(\",\")\",\"=\",\"?\",\"_\",\">\",\"£\",\"#\",\"$\",\"½\",\"{\",\"[\",\"]\",\"}\"];\r",
+							"     \r",
+							"pm.test(\"message should not have specialChar\", function(){\r",
+							"     pm.expect(body.message.includes(specialChar)).to.be.false; //message should not have specialChar\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"message\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"Not Found\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Not Found\");\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}cityName=van",
+					"host": [
+						"{{baseURL}}cityName=van"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cityName_van",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io?cityName=van",
+							"protocol": "https",
+							"host": [
+								"a7186cd5-de01-4d09-adc9-9cddfb83e72e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"query": [
+								{
+									"key": "cityName",
+									"value": "van"
+								}
+							]
+						}
+					},
+					"code": 404,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Not Found\"\n}"
+				}
+			]
+		},
+		{
+			"name": "cityName is null",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"//List of comments made for the province of null\r",
+							"\r",
+							"pm.test(\"cityName check for Json Data\", function () {\r",
+							"     pm.expect((pm.request.toJSON().url.query[0]).value == null).to.be.true //cityName check for Json is null \r",
+							"})\r",
+							"\r",
+							"    let body = pm.response.json(); //object comes\r",
+							"\r",
+							"pm.test(\"type of body\", function(){\r",
+							"     pm.expect(typeof body.cityName == \"object\").to.be.true //[\"'cityName' can not be null.\"] is object\r",
+							"});\r",
+							"\r",
+							"pm.test(\"type of cityName\", function(){\r",
+							"     pm.expect(typeof body.cityName[0] == \"string\").to.be.true //'cityName' can not be null. is string\r",
+							"});\r",
+							"\r",
+							"pm.test(\"length of body\", function(){\r",
+							"     pm.expect(Object.keys(body).length).to.equal(1) //1\r",
+							"});\r",
+							"\r",
+							"    let specialChar = [\"!\",\"^\",\"+\",\"%\",\"&\",\"/\",\"(\",\")\",\"=\",\"?\",\"_\",\">\",\"£\",\"#\",\"$\",\"½\",\"{\",\"[\",\"]\",\"}\"];\r",
+							"    \r",
+							"pm.test(\"cityName should not have specialChar\", function(){\r",
+							"     pm.expect(body.cityName.includes(specialChar)).to.be.false; //cityName should not have specialChar\r",
+							"})\r",
+							"\r",
+							"pm.test(\"Status code is 400\", function () {\r",
+							"    pm.response.to.have.status(400);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"cityName value\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"'cityName' can not be null.\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Status code name has string\", function () {\r",
+							"    pm.response.to.have.status(\"Bad Request\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}cityName",
+					"host": [
+						"{{baseURL}}cityName"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "cityName is null",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://a7186cd5-de01-4d09-adc9-9cddfb83e72e.mock.pstmn.io?cityName",
+							"protocol": "https",
+							"host": [
+								"a7186cd5-de01-4d09-adc9-9cddfb83e72e",
+								"mock",
+								"pstmn",
+								"io"
+							],
+							"query": [
+								{
+									"key": "cityName",
+									"value": null
+								}
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": "json",
+					"header": [],
+					"cookie": [],
+					"body": "{\n  \"cityName\": [\n    \"'cityName' can not be null.\"\n  ]\n}"
+				}
+			]
+		}
+	]
+}
