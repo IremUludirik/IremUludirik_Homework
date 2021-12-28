@@ -87,7 +87,7 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
 
     
   - Senaryo II: Başarılı bir şekilde üye olmak
-      - Uygulamaya giriş yapılır.
+      - Uygulamaya giriş yapılır. 
       - "Join for free" butonuna basılır.
       - E-mail girilir.
       - Uygun, geçerli bir username girilir.
