@@ -1,21 +1,40 @@
-# Cicek Sepeti Bootcamp API Test :palm_tree::hibiscus:
+<div align ="center">  
+    
+# Cicek Sepeti Bootcamp API Test :palm_tree::hibiscus: 
 
+</div>
 
 :pushpin: An integration test was written to check the responses returned based on the cityName parameter for the API in the submitted POSTMAN collection.
 &nbsp;
-:pushpin: Import link: https://www.getpostman.com/collections/c1fff77a2f21ae1702ea
-&nbsp;
 
+:pushpin: **Import link:** https://www.getpostman.com/collections/c1fff77a2f21ae1702ea
+&nbsp;
+<div align ="center">
+    
 # :white_check_mark::lollipop: All Results Before Details
 <a href="https://resimlink.com/YXah" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/YXah.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 <a href="https://resimlink.com/lwPa76" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/lwPa76.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 &nbsp;
-
-**Details:**
-#:star2::earth_americas: environment
+</div>
+<div align ="center">
+    
+# **Details:**
+</div>
+<div align ="center">
+    
+# :star2::earth_americas: Environment
 <a href="https://resimlink.com/hTNpDq" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/hTNpDq.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
-
+ &nbsp;
+  
+ &nbsp;
+ 
+</div>
+<div align ="center">
+    
 # :star2:**cityName :arrow_right: ankara :arrow_right: Ankara ili için yapılan yorumlar listesi** :dart:
+    
+</div>
+
 Tests of;
 - General:
     - cityName check for Json Data
@@ -87,13 +106,20 @@ Tests of;
 
 - regionName:
     - type of regionName ,for only ANKARA,
-
+ &nbsp;
+ 
+<div align ="center">
 <a href="https://resimlink.com/2knc" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/2knc.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 <a href="https://resimlink.com/Qph43N" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/Qph43N.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+</div>
 &nbsp;
 
-
+<div align ="center">
+    
 # :star2: **cityName :arrow_right: istanbul       :arrow_right: İstanbul ili için yapılan yorumlar listesi** :dart:
+    
+</div>
+
 Tests of;
 - General:
     - cityName check for Json Data
@@ -131,12 +157,20 @@ Tests of;
 
 - regionName:
     - type of regionName
-
+&nbsp;
+ 
+<div align ="center">
+    
  <a href="https://resimlink.com/iqZv1Q5c" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/iqZv1Q5c.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>   
  <a href="https://resimlink.com/uIFeYhy" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/uIFeYhy.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+</div>
 &nbsp;
 
+<div align ="center">
+    
 # :star2: **cityName :arrow_right: van :arrow_right: status is 404** :dart:
+</div>
+
 Tests of;
 - General:
     - cityName check for Json Data
@@ -149,14 +183,22 @@ Tests of;
     - Status code is 404
     - message
     - Status code name has string
-
+    
+ &nbsp;
+ 
+<div align ="center">
+    
 <a href="https://resimlink.com/vufRz3K" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/vufRz3K.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 <a href="https://resimlink.com/jTO2ZKX" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/jTO2ZKX.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+</div> 
 
 &nbsp;
 
-
+<div align ="center">
+    
 # :star2: **cityName :arrow_right: null :arrow_right: status is 400** :dart:
+</div>
+
 Tests of;
 - General:
     - cityName check for Json Data
@@ -167,7 +209,10 @@ Tests of;
     - Status code is 404
     - cityName value
     - Status code name has string
-
+ &nbsp;
+<div align ="center">
+    
 <a href="https://resimlink.com/fkvc4FQI" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/fkvc4FQI.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 <a href="https://resimlink.com/OUYTClI" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/OUYTClI.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+</div>
 &nbsp;
