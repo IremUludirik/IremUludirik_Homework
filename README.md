@@ -2,6 +2,8 @@
 
 Homeworks for Çiçek Sepeti Test Automation Bootcamp
 
+:white_check_mark: **Cicek Sepeti Bootcamp API Test Homework** :white_check_mark:
+
 - [x] 1. Hafta :tada::
   - 1. Homework
       - 25 Manuel Test (Excel)
@@ -37,4 +39,4 @@ Homeworks for Çiçek Sepeti Test Automation Bootcamp
       - BDD Android Tests
  &nbsp;
       
-:white_check_mark: **Cicek Sepeti Bootcamp API Test Homework** :white_check_mark:
+
