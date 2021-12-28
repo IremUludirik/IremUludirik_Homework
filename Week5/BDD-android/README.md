@@ -1,12 +1,12 @@
-# Javada Page Object Model ile Android Test Otomasyonu 
+# Javada BDD+POM ile Android Test Otomasyonu
 :tada: Detaylar için Medium üzerinden yazdığım yazıya bakabilirsiniz:
-&nbsp; 
+&nbsp;
 
-https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otomasyonu-ad0fd13b2453
+https://medium.com/@iremuludirik/javada-bdd-pom-ile-android-test-otomasyonu-f33d064a5d01
 
 **EN**
 
-- Appium Server, Appium Inspector, Android Studio, emulator were used.
+- Appium Server, Appium Inspector, Android Studio, cucumber java, JUnit,  Gherkin, emulator were used.
 - Worked with APKs.
 - Dependencies installations have taken place.
 - Started test recording via Appium and exported as Java.
@@ -16,7 +16,7 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
     &nbsp;
     
   - Scenario I: Not being a member
-      - Login to the application.
+       - Login to the application.
        - Press the "Join for free" button.
        - E-mail is entered.
        - Enter username containing invalid characters (!'^+%&/()=?* etc.).
@@ -67,7 +67,7 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
 
 **TR**
 
-- Appium Server, Appium Inspector, Android Studio, emulatör kullanıldı.
+- Appium Server, Appium Inspector, Android Studio, cucumber java, JUnit, Gherkin, emulatör kullanıldı.
 - APK’ler ile çalışıldı.
 - Dependencies kurulumları gerçekleşti.
 - Appium üzerinden test kaydı başlatıp Java olarak export edildi.
@@ -130,7 +130,7 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
  # :open_file_folder: Klasörleme :open_file_folder:
   
 &nbsp;
-<a href="https://resimlink.com/dWjNGIt1" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/dWjNGIt1.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+<a href="https://resimlink.com/QKxTCZJ" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/QKxTCZJ.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 
 
 &nbsp;
@@ -141,11 +141,13 @@ https://medium.com/@iremuludirik/javada-page-object-model-ile-android-test-otoma
   - Sing Up:
   &nbsp;
   
-  <a href="https://resimlink.com/JjhD" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/JjhD.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+<a href="https://resimlink.com/KQLIXb6" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/KQLIXb6.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+  <a href="https://resimlink.com/hnrHJI" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/hnrHJI.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
     &nbsp;
   
   - Login:
   &nbsp;
   
-<a href="https://resimlink.com/SKoEL" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/SKoEL.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+<a href="https://resimlink.com/wMHj1u" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/wMHj1u.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
+  <a href="https://resimlink.com/Bxi51yL" title="ResimLink - Resim Yükle"><img src="https://r.resimlink.com/Bxi51yL.jpg" title="ResimLink - Resim Yükle" alt="ResimLink - Resim Yükle"></a>
 
