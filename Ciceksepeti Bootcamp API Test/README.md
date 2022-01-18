@@ -33,7 +33,7 @@
     
 # :star2:**cityName :arrow_right: ankara :arrow_right: Ankara ili için yapılan yorumlar listesi** :dart:
     
-</div>
+</div> 
 
 Tests of;
 - General:
